@@ -17,6 +17,55 @@
 		}(window, document, 'ttq');
 	</script>
 	
+    <script>
+        ttq.identify({
+          "email": "<hashed_email_address>", // обов'язково хешуйте дані за допомогою SHA-256
+          "phone_number": "<hashed_phone_number>",
+          "external_id": "<hashed_extenal_id>"
+        });
+      </script>
+
+<script>
+    ttq.track('ViewContent', {
+      "contents": [
+        {
+          "content_id": "12345", // ідентифікатор контенту
+          "content_type": "product", // тип контенту
+          "content_name": "Sample Product" // назва продукту або сторінки
+        }
+      ],
+      "value": 100, // вартість контенту
+      "currency": "USD" // валюта
+    });
+  </script>
+
+<script>
+    ttq.track('AddToCart', {
+      "contents": [
+        {
+          "content_id": "12345",
+          "content_type": "product",
+          "content_name": "Sample Product"
+        }
+      ],
+      "value": 100,
+      "currency": "USD"
+    });
+  </script>
+
+<script>
+    ttq.track('CompletePayment', {
+      "contents": [
+        {
+          "content_id": "12345",
+          "content_type": "product",
+          "content_name": "Sample Product"
+        }
+      ],
+      "value": 100,
+      "currency": "USD"
+    });
+  </script>
 </head>
 <body>
     
